@@ -1,5 +1,6 @@
+# At the moment I don't know if a non root shell with no openSSH make sense, but here for deploying
+
 FROM ubuntu:20.04
-RUN apt-get update && apt-get install -y nano openssh-client
 
 ADD https://github.com/tsl0922/ttyd/releases/download/1.6.3/ttyd.aarch64 /usr/bin/ttyd
 RUN chmod +x /usr/bin/ttyd

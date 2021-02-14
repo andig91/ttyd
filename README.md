@@ -1,7 +1,8 @@
 # ttyd - Share your terminal over the web  
 
 ttyd is a simple command-line tool for sharing terminal over the web.  
-This port provides a arm64-Version (andi91/ttyd_arm)  
+
+This port provides a arm64-Version as Docker-container (andi91/ttyd_arm)  
 
 andi91/ttyd_ssh_arm brings additional: (no alpine version)  
 + non-root  
@@ -9,6 +10,22 @@ andi91/ttyd_ssh_arm brings additional: (no alpine version)
 + openSSH-client  
 + nano  
 
+Docker CLI Command for andi91/ttyd_ssh_arm:  
+`sudo docker run -d -p 7681:7681 -e user=<username> -e password=<secretpassword> andi91/ttyd_ssh_arm`  
+
+```
+version: '3'
+services:
+  webshell:
+    image: 'andi91/ttyd_ssh_arm'
+    environment:
+     - user=<username>
+     - password=<secretpassword>
+	#env_file:	#alternative write environment variables in file
+    # - ./userpass.env
+    ports:
+     - "7681:7681"
+```
 
 ![screenshot](https://github.com/tsl0922/ttyd/raw/master/screenshot.gif)
 

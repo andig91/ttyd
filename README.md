@@ -1,11 +1,15 @@
-# ttyd - Share your terminal over the web ![backend](https://github.com/tsl0922/ttyd/workflows/backend/badge.svg) ![frontend](https://github.com/tsl0922/ttyd/workflows/frontend/badge.svg)
+# ttyd - Share your terminal over the web  
 
-ttyd is a simple command-line tool for sharing terminal over the web.
-This port provides brings a arm64-Version with: (alpine Dockerfiles not working)
-+ non-root
-+ login-shell
-+ openSSH-client (Only in Dockerfile_nano_ssh)
-+ nano (Only in Dockerfile_nano_ssh)
+ttyd is a simple command-line tool for sharing terminal over the web.  
+This port provides brings a arm64-Version (andi91/ttyd_arm)  
+
+andi91/ttyd_ssh_arm brings additional:  
++ non-root  
++ login-shell  
++ openSSH-client (Only in Dockerfile_nano_ssh)  
++ nano (Only in Dockerfile_nano_ssh)  
+
+(alpine Dockerfiles not working)  
 
 ![screenshot](https://github.com/tsl0922/ttyd/raw/master/screenshot.gif)
 

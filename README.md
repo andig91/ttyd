@@ -4,24 +4,27 @@ ttyd is a simple command-line tool for sharing terminal over the web.
 
 This port provides a arm64-Version as Docker-container (andi91/ttyd_arm)  
 
-andi91/ttyd_ssh_arm brings additional: (no alpine version)  
+andi91/ttyd_ssh_arm is outdated use andi91/ttyd_arm_extended
+
+andi91/ttyd_arm_extended brings additional: (no alpine version)  
 + non-root  
 + login-shell  
 + openSSH-client  
 + nano  
++ screen  
 
-Docker CLI Command for andi91/ttyd_ssh_arm:  
-`sudo docker run -d -p 7681:7681 -e user=<username> -e password=<secretpassword> andi91/ttyd_ssh_arm`  
+Docker CLI Command for andi91/ttyd_arm_extended:  
+`sudo docker run -d -p 7681:7681 -e user=<username> -e password=<secretpassword> andi91/ttyd_arm_extended`  
 
 ```
 version: '3'
 services:
   webshell:
-    image: 'andi91/ttyd_ssh_arm'
+    image: 'andi91/ttyd_arm_extended'
     environment:
      - user=<username>
      - password=<secretpassword>
-	#env_file:	#alternative write environment variables in file
+    #env_file:	#alternative write environment variables in file
     # - ./userpass.env
     ports:
      - "7681:7681"

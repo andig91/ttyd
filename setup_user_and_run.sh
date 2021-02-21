@@ -19,7 +19,7 @@ useradd -m $user
 usermod -s /bin/bash $user 
 usermod -s /bin/nologin root 
 echo "$user:$password" | chpasswd
-
+# Falls ich doch mal das Image anders aufbaue: https://askubuntu.com/questions/558669/renaming-user-name  
 # clear user and password
 user=$(echo -n secret)
 password=$(echo -n secret)

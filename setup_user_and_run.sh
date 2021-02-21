@@ -20,6 +20,10 @@ usermod -s /bin/bash $user
 usermod -s /bin/nologin root 
 echo "$user:$password" | chpasswd
 
+# clear user and password
+user=$(echo -n secret)
+password=$(echo -n secret)
+
 echo start ttyd
 
 /sbin/tini ttyd login
